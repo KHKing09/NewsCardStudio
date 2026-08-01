@@ -237,3 +237,25 @@ body.dark-mode {
         gap: 30px;
     }
 }
+/* ==========================================
+   APP FOOTER STYLES
+   ========================================== */
+.app-footer {
+    background-color: #0b1329;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+    border-top: 1px solid #1e293b;
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+.app-footer p {
+    margin: 4px 0;
+}
+
+.app-footer span {
+    color: #38bdf8; /* Kamal Web Studio হাইলাইট কালার */
+    font-weight: 600;
+}
