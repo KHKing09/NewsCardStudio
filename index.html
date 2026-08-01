@@ -16,6 +16,11 @@
     <link rel="stylesheet" href="templates/template-styles.css">
     <link rel="manifest" href="manifest.json">
 <meta name="theme-color" content="#0b1329">
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/pwabuilder-sw.js');
+  }
+</script>
 </head>
 </head>
 <body class="dark-mode">
