@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname))); // Serve static files from the project root
-
+app.use('/.well-known', express.static(path.join(__dirname, '.well-known')));
 // API Endpoint: fetch article details from a news link
 app.post('/api/scrape', async (req, res) => {
   try {
