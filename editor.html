@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Editor - News Card Studio Pro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/editor.css">
+    <link rel="stylesheet" href="templates/template-styles.css">
+</head>
+<body class="dark-mode">
+    <nav class="navbar">
+        <div class="logo"><i class="fa-solid fa-newspaper"></i> News Card <span>Studio Pro</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Templates</a></li>
+            <li><a href="editor.html" class="active">Editor</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="editor-grid">
+            <!-- Left Controls -->
+            <div class="editor-controls">
+                <h2><i class="fa-solid fa-sliders"></i> অ্যাডভান্সড কাস্টমাইজেশন</h2>
+                
+                <div class="input-group">
+                    <label>শিরোনামের ফন্ট সাইজ (px):</label>
+                    <input type="range" id="font-size-slider" min="14" max="32" value="18">
+                </div>
+
+                <div class="input-group">
+                    <label>শিরোনামের কালার:</label>
+                    <input type="color" id="title-color-picker" value="#ffffff">
+                </div>
+
+                <div class="input-group">
+                    <label>লোগো অন/অফ:</label>
+                    <button id="toggle-logo-btn" class="btn-secondary"><i class="fa-solid fa-eye"></i> লোগো হাইড/শো</button>
+                </div>
+
+                <div class="input-group">
+                    <label>কাস্টম ব্যাকগ্রাউন্ড কালার:</label>
+                    <input type="color" id="bg-color-picker" value="#0f172a">
+                </div>
+
+                <a href="index.html" class="btn-primary" style="text-align: center; display: block; margin-top: 20px;">
+                    <i class="fa-solid fa-arrow-left"></i> মূল এডিটরে ফিরে যান
+                </a>
+            </div>
+
+            <!-- Right Live Preview -->
+            <div class="preview-area">
+                <h2>লাইভ প্রিভিউ</h2>
+                <div id="news-card-preview" class="card-wrapper">
+                    <!-- Default Card Component -->
+                    <div class="news-card tpl-1" id="adv-card">
+                        <div class="header-bg">
+                            <span class="site-name" id="card-logo-text"><i class="fa-solid fa-newspaper"></i> News Studio</span>
+                            <span class="card-date">আজকের খবর</span>
+                        </div>
+                        <div class="card-image-box">
+                            <img src="assets/default-img.jpg" alt="News Image" id="card-img-preview">
+                        </div>
+                        <div class="card-body" id="card-body-box">
+                            <h2 id="adv-card-title">এখানে আপনার অ্যাডভান্সড স্টাইলের শিরোনাম দেখাবে</h2>
+                        </div>
+                        <div class="footer-bg">বিস্তারিত কমেন্টে দেখুন</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Card Studio Pro</title>
+    
+    <!-- Font Awesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ১. ওয়েবসাইটের মেইন স্টাইল -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- ২. ৩০টি ফটো কার্ডের টেমপ্লেট স্টাইল -->
+    <link rel="stylesheet" href="templates/template-styles.css">
+</head>
+</head>
+<body class="dark-mode">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-newspaper"></i> News Card <span>Studio Pro</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="gallery.html">Templates</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- News Link Input Section -->
+        <section class="input-section">
+            <h2>সংবাদের কার্ড তৈরি করুন মুহূর্তেই</h2>
+            <p>যেকোনো সংবাদের লিংক পেস্ট করে অটো-ফেচ করুন অথবা ম্যানুয়ালি এডিট করুন।</p>
+            
+            <div class="url-box">
+                <input type="url" id="news-url-input" placeholder="খবরের লিংকটি এখানে পেস্ট করুন (e.g. https://prothomalo.com/...)">
+                <button id="fetch-btn"><i class="fa-solid fa-wand-magic-sparkles"></i> Auto Fetch</button>
+            </div>
+            <div id="status-message" class="status-msg"></div>
+        </section>
+
+        <!-- Main Studio Area -->
+        <section class="studio-grid">
+            
+            <!-- Editor Controls (Left Side) -->
+            <div class="editor-controls">
+                <h3><i class="fa-solid fa-sliders"></i> কাস্টমাইজেশন</h3>
+                
+                <div class="control-group">
+                    <label>শিরোনাম (Title)</label>
+                    <textarea id="edit-title" rows="3" placeholder="খবরের হেডলাইন..."></textarea>
+                </div>
+
+                <div class="control-group">
+                    <label>সোশ্যাল মিডিয়া/মিডিয়ার নাম</label>
+                    <input type="text" id="edit-site" placeholder="যেমন: প্রথম আলো">
+                </div>
+
+                <div class="control-group">
+                    <label>তারিখ (Date)</label>
+                    <input type="text" id="edit-date" placeholder="যেমন: ০১ আগস্ট ২০২৬">
+                </div>
+
+                <div class="control-group">
+                    <label>ছবি পরিবর্তন</label>
+                    <input type="file" id="edit-image-file" accept="image/*">
+                </div>
+
+                <div class="control-group">
+                    <label>টেমপ্লেট সিলেক্ট করুন</label>
+                    <select id="template-select">
+    <option value="tpl-1">01. Jamuna TV Style</option>
+    <option value="tpl-2">02. RTV Style</option>
+    <option value="tpl-3">03. Channel 24 Style</option>
+    <option value="tpl-4">04. Somoy TV Style</option>
+    <option value="tpl-5">05. Independent TV Style</option>
+    <option value="tpl-6">06. NTV Style</option>
+    <option value="tpl-7">07. ATN News Style</option>
+    <option value="tpl-8">08. Ekattor TV Style</option>
+    <option value="tpl-9">09. যুগান্তর স্টাইল</option>
+    <option value="tpl-10">10. প্রথম আলো স্টাইল</option>
+    <option value="tpl-11">11. ইত্তেফাক স্টাইল</option>
+    <option value="tpl-12">12. কালের কণ্ঠ স্টাইল</option>
+    <option value="tpl-13">13. DBC News Style</option>
+    <option value="tpl-14">14. News24 Style</option>
+    <option value="tpl-15">15. Bangla Vision Style</option>
+    <option value="tpl-16">16. Channel i Style</option>
+    <option value="tpl-17">17. Desh TV Style</option>
+    <option value="tpl-18">18. BTV Style</option>
+    <option value="tpl-19">19. বাংলাদেশ প্রতিদিন স্টাইল</option>
+    <option value="tpl-20">20. সমকাল স্টাইল</option>
+    <option value="tpl-21">21. মানবজমিন স্টাইল</option>
+    <option value="tpl-22">22. The Daily Star Style</option>
+    <option value="tpl-23">23. Dhaka Tribune Style</option>
+    <option value="tpl-24">24. Business Standard Style</option>
+    <option value="tpl-25">25. Boishakhi TV Style</option>
+    <option value="tpl-26">26. Asian TV Style</option>
+    <option value="tpl-27">27. Mohona TV Style</option>
+    <option value="tpl-28">28. Gtv (Gazi TV) Style</option>
+    <option value="tpl-29">29. নয়া দিগন্ত স্টাইল</option>
+    <option value="tpl-30">30. যায়যায়দিন স্টাইল</option>
+</select>
+                </div>
+
+                <button id="download-btn" class="download-btn"><i class="fa-solid fa-download"></i> কার্ড ডাউনলোড (PNG)</button>
+            </div>
+
+            <!-- Card Live Preview (Right Side) -->
+<div class="preview-area">
+    <h3><i class="fa-solid fa-eye"></i> লাইভ প্রিভিউ</h3>
+    
+    <div class="card-wrapper">
+        <!-- Target Card for Export -->
+        <div id="news-card-preview" class="news-card tpl-1">
+            
+            <div class="card-image-box">
+                <img id="card-img" src="https://via.placeholder.com/600x400" alt="News Image">
+            </div>
+
+            <div class="card-content">
+                <div class="header-bg">
+                    <span id="card-site">News Studio</span>
+                    <span id="card-date">আজকের খবর</span>
+                </div>
+
+                <div class="card-body">
+                    <h2 id="card-title">আপনার খবরের বিস্তারিত শিরোনাম এখানে প্রদর্শিত হবে।</h2>
+                </div>
+
+                <div class="footer-bg">
+                    <span id="card-footer-text">বিস্তারিত কমেন্টে</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+        </section>
+    </main>
+
+    <!-- html2canvas Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Custom JS -->
+     <script src="js/scraper.js"></script>
+     <script src="js/parser.js"></script>
+     <script src="js/exporter.js"></script>
+     <script src="js/app.js"></script>
+</body>
+</html>

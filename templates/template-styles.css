@@ -1,0 +1,246 @@
+/* ==========================================
+   NEWS CARD STUDIO PRO - 30 UNIQUE TEMPLATES
+   ========================================== */
+
+/* Base Container */
+.news-card {
+    width: 440px;
+    height: 440px;
+    position: relative;
+    background: #0f172a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    font-family: 'Hind Siliguri', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-card .card-image-box {
+    position: absolute;
+    top: 50px;
+    left: 12px;
+    right: 12px;
+    height: 240px;
+    z-index: 1;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.news-card .card-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-card .card-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-card .header-bg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: #dc2626;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* ==========================================
+   শিরোনাম সম্পূর্ণ দেখানোর জন্য ফিক্সড অংশ
+   ========================================== */
+.news-card .card-body {
+    position: absolute;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+    background: rgba(15, 23, 42, 0.95);
+    padding: 10px 15px;
+    border-top: 3px solid #dc2626;
+    max-height: 120px;          /* সর্বোচ্চ ৩-৪ লাইন বসার জায়গা */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.news-card .card-body h2 {
+    color: #ffffff;
+    font-size: 0.95rem;         /* ফন্ট সাইজ হালকা ছোট করা হয়েছে যাতে বড় লেখা আঁটে */
+    line-height: 1.35;          /* লাইনের গ্যাপ পারফেক্ট করা হয়েছে */
+    font-weight: 700;
+    margin: 0;
+    white-space: normal;        /* লেখা যেন ভাঙতে পারে */
+    word-break: break-word;     /* বড় শব্দ ভেঙে নিচে নামবে */
+    overflow-wrap: break-word;
+    width: 100%;
+}
+
+.news-card .footer-bg {
+    background: #000000;
+    color: #f8fafc;
+    text-align: center;
+    padding: 6px 0;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* =========================================================
+   ৩০টি অরিজিনাল নিউজ মিডিয়া ফটো কার্ড টেমপ্লেট
+   ========================================================= */
+
+/* 1. Jamuna TV Red (tpl-1) */
+.news-card.tpl-1 { background: #0f0f0f; border-top: 5px solid #e11d48; color: #ffffff; }
+.news-card.tpl-1 .card-header { background: #e11d48; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-1 .card-body h2 { color: #ffffff; font-size: 20px; padding: 15px; }
+
+/* 2. RTV Blue Premium (tpl-2) */
+.news-card.tpl-2 { background: #ffffff; border: 2px solid #0284c7; }
+.news-card.tpl-2 .card-header { background: #0284c7; color: #ffffff; font-weight: bold; padding: 8px 15px; }
+.news-card.tpl-2 .card-body { background: #f8fafc; padding: 15px; border-top: 3px solid #0284c7; }
+.news-card.tpl-2 .card-body h2 { color: #0f172a; font-size: 20px; }
+
+/* 3. Channel 24 Gold (tpl-3) */
+.news-card.tpl-3 { background: #1e293b; border-left: 6px solid #f59e0b; }
+.news-card.tpl-3 .card-header { background: #f59e0b; color: #000; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-3 .card-body h2 { color: #fef08a; font-size: 20px; padding: 15px; }
+
+/* 4. Somoy TV Red-Yellow (tpl-4) */
+.news-card.tpl-4 { background: #7f1d1d; border-bottom: 6px solid #facc15; }
+.news-card.tpl-4 .card-header { background: #facc15; color: #000; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-4 .card-body h2 { color: #ffffff; font-size: 20px; padding: 15px; }
+
+/* 5. Independent TV Green (tpl-5) */
+.news-card.tpl-5 { background: #000000; border-right: 6px solid #22c55e; }
+.news-card.tpl-5 .card-header { background: #22c55e; color: #000; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-5 .card-body h2 { color: #ffffff; font-size: 20px; padding: 15px; }
+
+/* 6. NTV Purple (tpl-6) */
+.news-card.tpl-6 { background: #1e1b4b; border-top: 5px solid #6366f1; }
+.news-card.tpl-6 .card-header { background: #6366f1; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-6 .card-body h2 { color: #e0e7ff; font-size: 20px; padding: 15px; }
+
+/* 7. ATN News Emerald (tpl-7) */
+.news-card.tpl-7 { background: #064e3b; border-bottom: 5px solid #10b981; }
+.news-card.tpl-7 .card-header { background: #10b981; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-7 .card-body h2 { color: #ecfdf5; font-size: 20px; padding: 15px; }
+
+/* 8. Ekattor TV Crimson (tpl-8) */
+.news-card.tpl-8 { background: #450a0a; border-left: 6px solid #ef4444; }
+.news-card.tpl-8 .card-header { background: #ef4444; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-8 .card-body h2 { color: #ffffff; font-size: 20px; padding: 15px; }
+
+/* 9. যুগান্তর রেড (tpl-9) */
+.news-card.tpl-9 { background: #ffffff; border: 2px solid #b91c1c; }
+.news-card.tpl-9 .card-header { background: #b91c1c; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-9 .card-body h2 { color: #1c1917; font-size: 20px; padding: 15px; }
+
+/* 10. প্রথম আলো ব্লু (tpl-10) */
+.news-card.tpl-10 { background: #ffffff; border-top: 5px solid #2563eb; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+.news-card.tpl-10 .card-header { background: #2563eb; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-10 .card-body h2 { color: #0f172a; font-size: 20px; padding: 15px; }
+
+/* 11. ইত্তেফাক ক্লাসিক (tpl-11) */
+.news-card.tpl-11 { background: #fefce8; border: 2px solid #ca8a04; }
+.news-card.tpl-11 .card-header { background: #ca8a04; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-11 .card-body h2 { color: #713f12; font-size: 20px; padding: 15px; }
+
+/* 12. কালের কণ্ঠ রেড (tpl-12) */
+.news-card.tpl-12 { background: #18181b; border-bottom: 5px solid #dc2626; }
+.news-card.tpl-12 .card-header { background: #dc2626; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-12 .card-body h2 { color: #fafafa; font-size: 20px; padding: 15px; }
+/* 13. DBC News (tpl-13) */
+.news-card.tpl-13 { background: #0f172a; border-left: 6px solid #06b6d4; }
+.news-card.tpl-13 .card-header { background: #06b6d4; color: #000; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-13 .card-body h2 { color: #cff4fc; font-size: 20px; padding: 15px; }
+
+/* 14. News24 Cyan (tpl-14) */
+.news-card.tpl-14 { background: #0284c7; border: 2px solid #38bdf8; }
+.news-card.tpl-14 .card-header { background: #0369a1; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-14 .card-body h2 { color: #ffffff; font-size: 20px; padding: 15px; }
+
+/* 15. Bangla Vision Green (tpl-15) */
+.news-card.tpl-15 { background: #14532d; border-top: 5px solid #22c55e; }
+.news-card.tpl-15 .card-header { background: #22c55e; color: #000; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-15 .card-body h2 { color: #f0fdf4; font-size: 20px; padding: 15px; }
+
+/* 16. Channel i Orange (tpl-16) */
+.news-card.tpl-16 { background: #fff7ed; border: 2px solid #ea580c; }
+.news-card.tpl-16 .card-header { background: #ea580c; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-16 .card-body h2 { color: #7c2d12; font-size: 20px; padding: 15px; }
+
+/* 17. Desh TV Red (tpl-17) */
+.news-card.tpl-17 { background: #111827; border-bottom: 5px solid #f43f5e; }
+.news-card.tpl-17 .card-header { background: #f43f5e; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-17 .card-body h2 { color: #f3f4f6; font-size: 20px; padding: 15px; }
+
+/* 18. BTV National (tpl-18) */
+.news-card.tpl-18 { background: #064e3b; border-left: 6px solid #ef4444; }
+.news-card.tpl-18 .card-header { background: #ef4444; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-18 .card-body h2 { color: #ffffff; font-size: 20px; padding: 15px; }
+
+/* 19. Bangladesh Pratidin (tpl-19) */
+.news-card.tpl-19 { background: #ffffff; border: 2px solid #e11d48; }
+.news-card.tpl-19 .card-header { background: #e11d48; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-19 .card-body h2 { color: #1f2937; font-size: 20px; padding: 15px; }
+
+/* 20. Samakal Newspaper (tpl-20) */
+.news-card.tpl-20 { background: #f8fafc; border-top: 5px solid #0d9488; }
+.news-card.tpl-20 .card-header { background: #0d9488; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-20 .card-body h2 { color: #111827; font-size: 20px; padding: 15px; }
+
+/* 21. Manab Zamin (tpl-21) */
+.news-card.tpl-21 { background: #1c1917; border-right: 6px solid #d97706; }
+.news-card.tpl-21 .card-header { background: #d97706; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-21 .card-body h2 { color: #fef3c7; font-size: 20px; padding: 15px; }
+
+/* 22. Daily Star English (tpl-22) */
+.news-card.tpl-22 { background: #ffffff; border: 2px solid #0f172a; }
+.news-card.tpl-22 .card-header { background: #0f172a; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-22 .card-body h2 { color: #0f172a; font-size: 20px; padding: 15px; }
+
+/* 23. Dhaka Tribune (tpl-23) */
+.news-card.tpl-23 { background: #f1f5f9; border-bottom: 5px solid #2563eb; }
+.news-card.tpl-23 .card-header { background: #2563eb; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-23 .card-body h2 { color: #1e293b; font-size: 20px; padding: 15px; }
+
+/* 24. Business Standard (tpl-24) */
+.news-card.tpl-24 { background: #0f172a; border-top: 5px solid #10b981; }
+.news-card.tpl-24 .card-header { background: #10b981; color: #000; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-24 .card-body h2 { color: #f8fafc; font-size: 20px; padding: 15px; }
+
+/* 25. Boishakhi TV (tpl-25) */
+.news-card.tpl-25 { background: #450a0a; border-right: 6px solid #f59e0b; }
+.news-card.tpl-25 .card-header { background: #f59e0b; color: #000; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-25 .card-body h2 { color: #ffffff; font-size: 20px; padding: 15px; }
+/* 26. Asian TV (tpl-26) */
+.news-card.tpl-26 { background: #312e81; border-left: 6px solid #818cf8; }
+.news-card.tpl-26 .card-header { background: #818cf8; color: #000; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-26 .card-body h2 { color: #e0e7ff; font-size: 20px; padding: 15px; }
+
+/* 27. Mohona TV (tpl-27) */
+.news-card.tpl-27 { background: #064e3b; border-top: 5px solid #34d399; }
+.news-card.tpl-27 .card-header { background: #34d399; color: #000; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-27 .card-body h2 { color: #ecfdf5; font-size: 20px; padding: 15px; }
+
+/* 28. Gtv (Gazi TV) (tpl-28) */
+.news-card.tpl-28 { background: #881337; border-bottom: 5px solid #fb7185; }
+.news-card.tpl-28 .card-header { background: #fb7185; color: #000; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-28 .card-body h2 { color: #fff1f2; font-size: 20px; padding: 15px; }
+
+/* 29. Naya Diganta (tpl-29) */
+.news-card.tpl-29 { background: #ffffff; border: 2px solid #047857; }
+.news-card.tpl-29 .card-header { background: #047857; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-29 .card-body h2 { color: #064e3b; font-size: 20px; padding: 15px; }
+
+/* 30. Jaijaidin (tpl-30) */
+.news-card.tpl-30 { background: #111827; border-top: 5px solid #a855f7; }
+.news-card.tpl-30 .card-header { background: #a855f7; color: #fff; font-weight: bold; padding: 6px 12px; }
+.news-card.tpl-30 .card-body h2 { color: #f3e8ff; font-size: 20px; padding: 15px; }
