@@ -166,3 +166,74 @@ body.dark-mode {
     padding: 20px;
     border-radius: 8px;
 }
+/* =========================================================
+   মোবাইল ও মোবাইল অ্যাপ (APK) ফ্রেন্ডলি রেসপন্সিভ লেআউট
+   ========================================================= */
+
+/* ১. মোবাইল স্ক্রিনের জন্য (768px এর নিচে) */
+@media (max-width: 768px) {
+    /* কন্টেইনার ফুল উইডথ হবে */
+    .container,
+    .main-wrapper,
+    .editor-container {
+        width: 100% !important;
+        padding: 10px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* কাস্টমাইজেশন ও প্রিভিউ বক্স পাশাপাশি না থেকে উপরে-নিচে নামবে */
+    .editor-layout,
+    .grid-container,
+    .main-content {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    /* প্রতিটি সেকশন ফুল উইডথ পাবে */
+    .customization-section,
+    .preview-section,
+    .sidebar,
+    .content-area {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* হেডার ও নেভিগেশন বার ফিক্স */
+    header,
+    nav {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 10px !important;
+    }
+
+    /* অটো-ফেচ সার্চ বক্স ফিক্স */
+    .auto-fetch-box {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+
+    .auto-fetch-box input,
+    .auto-fetch-box button {
+        width: 100% !important;
+    }
+
+    /* নিউজ কার্ড প্রিভিউ যেন ফোনের স্ক্রিনের বাইরে বের না হয় */
+    .preview-section .news-card {
+        max-width: 100% !important;
+        transform: scale(0.95); /* মোবাইলে সুন্দর দেখানোর জন্য হালকা স্কেল */
+        transform-origin: top center;
+    }
+}
+
+/* ২. বড় কম্পিউটার স্ক্রিনের জন্য (769px এর উপরে) */
+@media (min-width: 769px) {
+    .editor-layout,
+    .grid-container {
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: center;
+        gap: 30px;
+    }
+}
